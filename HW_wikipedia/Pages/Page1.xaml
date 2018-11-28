@@ -1,0 +1,207 @@
+﻿<Page x:Class="HW_wikipedia.Pages.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HW_wikipedia.Pages"
+      mc:Ignorable="d"      
+      Title="Page1">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <FlowDocument>
+                <Section BorderBrush="LightGray" BorderThickness="2" Margin="0 0 0 20">
+                    <Section.Background>
+                        <ImageBrush ImageSource="../Images/Wiki_banner.png" Stretch="None" AlignmentX="Right" AlignmentY="Center"></ImageBrush>
+                    </Section.Background>
+                    <BlockUIContainer>
+                        <DockPanel LastChildFill="False">
+                            <StackPanel DockPanel.Dock="Left">
+                                <TextBlock FontSize="18" Padding="5">Добро пожаловать в Википедию,</TextBlock>
+                                <TextBlock FontSize="10" Padding="5 0 0 5">свободную энциклопедию, которую может редактировать каждый.</TextBlock>
+                            </StackPanel>
+                            <StackPanel DockPanel.Dock="Right">
+                                <StackPanel>
+                                    <WrapPanel>
+                                        <TextBlock FontSize="10" Text="Сейчас в Википедии" Padding="0 12 5 5"></TextBlock>
+                                        <TextBlock FontSize="10" Text="1 511 12 статья" Padding="0 12 5 5"></TextBlock>
+                                        <TextBlock FontSize="10" Text="на русском языке" Padding="0 12 5 5"></TextBlock>
+                                    </WrapPanel>
+                                    <WrapPanel>
+                                        <TextBlock FontSize="12" FontWeight="Bold" Text="Порталы" Margin="0 0 10 0"></TextBlock>
+                                        <TextBlock FontSize="12" FontWeight="Bold" Text="Справка" Margin="0 0 10 0"></TextBlock>
+                                        <Button FontSize="12" Margin="0 0 0 10" Background="WhiteSmoke" FontWeight="Bold" Content="Создать статью" Width="120" Height="20"></Button>
+                                    </WrapPanel>
+                                </StackPanel>
+                            </StackPanel>
+                        </DockPanel>
+                    </BlockUIContainer>
+                </Section>
+                <Table>
+                    <TableRowGroup>
+                        <TableRow>
+                            <TableCell>
+                                <Section BorderBrush="LightGray" BorderThickness="2" Padding="5">
+                                    <Paragraph>
+                                        <Run FontSize="14" Foreground="Gray">Избранная статья</Run>
+                                        <LineBreak></LineBreak>
+                                        <Run FontSize="18">Лян Цичао</Run>
+                                    </Paragraph>
+                                    <Paragraph FontSize="10">
+                                        <Floater Width="140" Padding="5,0" HorizontalAlignment="Right">
+                                            <BlockUIContainer>
+                                                <Image Source="../Images/lan.jpg"/>
+                                            </BlockUIContainer>
+                                        </Floater>
+                                        Лян Цичао в начале XX века Лян Цичао (кит. трад. 梁啟超, упр. 梁启超, пиньинь: Liáng Qǐchāo; 23 февраля 1873 — 19 января 1929) — китайский философ, историк философии, учёный, литератор, государственный и общественный деятель, один из лидеров либерального реформаторского движения в Китае конца XIX — начала XX века (так называемые «Сто дней реформ»). Ученик известного философа Кан Ювэя, автор первой его биографии (1901). Отец известного китайского архитектора Лян Сычэна; трое сыновей Лян Цичао стали членами Китайской академии наук.
+В 1896—1897 годах в Шанхае и Хунани занимался просветительской деятельностью; во время Ста дней реформ удостоился аудиенции императора и получил назначение главой школы переводчиков в Пекине. В 1898—1912 годах находился в эмиграции, долго жил в Японии, побывал в Австралии и США. В научно-публицистических работах этого периода стремился синтезировать идеи китайской философии с западным либерализмом, что привело к разрыву с его учителем Кан Ювэем. Был одним из создателей демократической партии, но в 1916 году перешёл в стан республиканцев. Занимал различные посты в правительствах Юань Шикая и Дуань Цижуя.
+                                    </Paragraph>
+                                    <BlockUIContainer>
+                                        <WrapPanel Margin="0 10 0 7">
+                                            <Button FontSize="12" Background="WhiteSmoke" FontWeight="Bold" Content="Читать" Width="80" Height="25" Margin="10 0 10 0"></Button>
+                                            <TextBlock FontSize="10" Text="Все 1157 избранных статей" Margin="10"></TextBlock>
+                                        </WrapPanel>
+                                    </BlockUIContainer>
+                                </Section>
+                            </TableCell>
+                            <TableCell>
+                                <Section BorderBrush="LightGray" BorderThickness="2">
+                                    <Paragraph Padding="5">
+                                        <Run FontSize="14" Foreground="Gray">Из новых материалов</Run>
+                                        <LineBreak></LineBreak>
+                                        <Run FontSize="16">Знаете ли Вы?</Run>
+                                    </Paragraph>
+                                    <List MarkerStyle="Disc" >
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                <Floater Width="80" Padding="5,0" HorizontalAlignment="Right">
+                                                    <BlockUIContainer>
+                                                        <Image Source="../Images/Sipi_tau.jpg"/>
+                                                    </BlockUIContainer>
+                                                </Floater>
+                                                Сборная по регби тихоокеанского государства (на илл.) увела у новозеландцев россыпь «звёзд».
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                В шахматах звание гроссмейстера носят три сестры Полгар, а в английских шашках — три сестры Брин.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                «Сокровенный, страстный шёпот души художника» вызвал скандал среди советских искусствоведов.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                <Floater Width="80" Padding="5,0" HorizontalAlignment="Right">
+                                                    <BlockUIContainer>
+                                                        <Image Source="../Images/Rachel's_Tomb.jpg"/>
+                                                    </BlockUIContainer>
+                                                </Floater>
+                                                Гробницу Рахили (на илл.) спас от разрушения британский чиновник.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                Канцлер, чьи распоряжения саботировали подчинённые, занимался переписыванием конституции.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                У нацистов была женская организация, а у российских фашистов — целое женское движение.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                Итало Кальвино назвал одним из величайших писателей спортивного журналиста.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                В первом советском сборнике Высоцкого текстологи в 129 стихотворениях насчитали больше 400 ошибок.
+                                            </Paragraph>
+                                        </ListItem>
+                                    </List>
+                                    <BlockUIContainer>
+                                        <WrapPanel Margin="0 10 0 7">
+                                            <Button FontSize="12" Background="WhiteSmoke" FontWeight="Bold" Content="Обсудить" Width="80" Height="25" Margin="10 0 10 0"></Button>
+                                        </WrapPanel>
+                                    </BlockUIContainer>
+                                </Section>
+                            </TableCell>
+                        </TableRow>
+                        <TableRow>
+                            <TableCell>
+                                <Section BorderBrush="LightGray" BorderThickness="2" Padding="5">
+                                    <Paragraph>
+                                        <Run FontSize="14" Foreground="Gray">Хорошая статья</Run>
+                                        <LineBreak></LineBreak>
+                                        <Run FontSize="18">Новая Москва</Run>
+                                    </Paragraph>
+                                    <Paragraph FontSize="10">
+                                        <Run Text="«"></Run>
+                                        <Bold Foreground="CornflowerBlue">Новая Москва</Bold>
+                                        <Run Text="» — картина советского художника Юрия Пименова, созданная в 1937 году. Картина символически выражает новый уклад социалистической жизни в СССР. В поэтической форме она выражает гордость художника своей страной. Искусствовед Логинова называла картину самой популярной из созданных мастером и программной для него. Она находится в коллекции Государственной Третьяковской галереи и демонстрируется в её постоянной экспозиции.
+Картина «Новая Москва» неоднократно была представлена на крупных международных выставках. Она воспринимается историками искусства как одна из лучших картин 1930-х годов."></Run>
+                                    </Paragraph>
+                                    <BlockUIContainer>
+                                        <WrapPanel Margin="0 10 0 7">
+                                            <Button FontSize="12" Background="WhiteSmoke" FontWeight="Bold" Content="Читать" Width="80" Height="25" Margin="10 0 10 0"></Button>
+                                            <TextBlock FontSize="10" Text="Все 1157 избранных статей" Margin="10"></TextBlock>
+                                        </WrapPanel>
+                                    </BlockUIContainer>
+                                </Section>
+                            </TableCell>
+                            <TableCell>
+                                <Section BorderBrush="LightGray" BorderThickness="2">
+                                    <Paragraph Padding="5">
+                                        <Run FontSize="16">Текущие события</Run>
+                                        <LineBreak></LineBreak>
+                                        <Bold FontSize="12">Актуальные темы:</Bold>
+                                        <Run Text="матч за звание чемпиона мира по шахматам чемпионат мира по шахматам среди женщин" FontSize="12" Foreground="CornflowerBlue"></Run>
+                                    </Paragraph>
+                                    <List MarkerStyle="Disc" >
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                <Floater Width="80" Padding="5,0" HorizontalAlignment="Right">
+                                                    <BlockUIContainer>
+                                                        <Image Source="../Images/SanJuan.jpg"/>
+                                                    </BlockUIContainer>
+                                                </Floater>
+                                                Аргентинская подлодка «Сан-Хуан» (на фото), спустя примерно год после исчезновения[en], найдена вблизи полуострова Вальдес.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                Международный комитет мер и весов принял новые определения килограмма, ампера, кельвина и моля.
+                                            </Paragraph>
+                                        </ListItem>
+                                        <ListItem Padding="5">
+                                            <Paragraph FontSize="10">
+                                                В результате лесных пожаров в Калифорнии погибли и пропали без вести более 1200 человек.
+                                            </Paragraph>
+                                        </ListItem>
+                                    </List>
+                                    <BlockUIContainer>
+                                        <WrapPanel Margin="0 10 0 7">
+                                            <Button FontSize="12" Background="WhiteSmoke" FontWeight="Bold" Content="Обсудить" Width="80" Height="25" Margin="10 0 10 0"></Button>
+                                        </WrapPanel>
+                                    </BlockUIContainer>
+                                </Section>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+    </Grid>
+</Page>

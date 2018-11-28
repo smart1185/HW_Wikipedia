@@ -1,0 +1,245 @@
+﻿<Window x:Class="HW_wikipedia.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HW_wikipedia"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="1100" Width="1000">
+    <ScrollViewer>
+        <Grid Background="WhiteSmoke">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="35"></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200"></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="11">
+                <Menu HorizontalAlignment="Right" Margin="0,10,9.8,0" VerticalAlignment="Top">
+                    <TextBlock >
+                            <Hyperlink>Обсуждение</Hyperlink>
+                    </TextBlock>
+                    <TextBlock >
+                            <Hyperlink>Вклад</Hyperlink>
+                    </TextBlock>
+                    <TextBlock >
+                            <Hyperlink>Создать учетную запись</Hyperlink>
+                    </TextBlock>
+                    <TextBlock >
+                            <Hyperlink>Войти</Hyperlink>
+                    </TextBlock>
+                </Menu>
+                <Border BorderBrush="LightBlue" BorderThickness="1" >
+                    <TabControl>
+                        <TabItem Header="Заглавная" HorizontalAlignment="Left">
+                            <Frame x:Name="MainFrame"></Frame>
+                        </TabItem>
+                        <TabItem Header="Обсуждение" HorizontalAlignment="Left"></TabItem>
+                        <TabItem Header="Читать" HorizontalAlignment="Right"></TabItem>
+                        <TabItem Header="Просмотр кода" HorizontalAlignment="Right"></TabItem>
+                        <TabItem Header="История" HorizontalAlignment="Right"></TabItem>
+                    </TabControl>
+                </Border>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Top" Background="Transparent" Grid.Row="0" Grid.RowSpan="12" Grid.Column="0">
+                <Image Source="Images/logoWiki.jpg"></Image>
+                <StackPanel HorizontalAlignment="Center" Margin="0 20 0 10">
+                    <TextBlock Padding="1">
+                        <Hyperlink>Заглавная страница</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                        <Hyperlink Click="Hyperlink_Click">Рубрикация</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                        <Hyperlink>Указатель А - Я</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                        <Hyperlink>Избранные статьи</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                        <Hyperlink>Случайная статья</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                        <Hyperlink>Текущие события</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock Padding="1" Text="Участие"></TextBlock>
+                    <Separator HorizontalAlignment="Stretch" Foreground="WhiteSmoke"></Separator>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Сообщить об ошибке</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Сообщество</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Форум</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Свежие правки</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Новые страницы</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Справка</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Пожертвовать</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock Padding="1" Text="Инструменты"></TextBlock>
+                    <Separator HorizontalAlignment="Stretch" Foreground="WhiteSmoke"></Separator>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Ссылки сюда</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Связанные правки</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Служебные страницы</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Постоянная ссылка</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Сведения о странице</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock Padding="1" Text="Печать/экспорт          "></TextBlock>
+                    <Separator HorizontalAlignment="Stretch" Foreground="WhiteSmoke"></Separator>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Создать книгу</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Скачать как PDF</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Версия для печати</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock Padding="1" Text="В других проектах"></TextBlock>
+                    <Separator HorizontalAlignment="Stretch" Foreground="WhiteSmoke"></Separator>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викисклад</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>MediaWiki</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Мета-вики</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викивиды</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викиучебник</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викиданные</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викиновости</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викицитатник</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викитека</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викиверситет</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викигид</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Викисловарь</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Элемент Викиданных</Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock Padding="1" Text="На других языках       "></TextBlock>
+                    <Separator HorizontalAlignment="Stretch" Foreground="WhiteSmoke"></Separator>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Azərbaycanca</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Башҡортса</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Беларуская</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Български</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Нохчийн</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Dansk</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Hyperlink>Deutsch‎</Hyperlink>
+                    </TextBlock>
+                    <TextBlock Padding="1">
+                                            <Bold Foreground="CornflowerBlue">Полный список</Bold>
+                    </TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <WrapPanel Grid.Row="12" Grid.Column="1" Grid.ColumnSpan="3">
+                <StackPanel>
+                    <TextBlock FontSize="8" Grid.Column="1" Grid.ColumnSpan="2">Текст доступен по лицензии Creative Commons Attribution-ShareAlike; в отдельных случаях могут действовать дополнительные условия. Подробнее см. Условия использования.</TextBlock>
+                    <TextBlock FontSize="8">Wikipedia® — зарегистрированный товарный знак некоммерческой организации Wikimedia Foundation, Inc.</TextBlock>
+                    <WrapPanel>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Политика конфиденциальности</Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Описание википедии</Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Отказ от ответственности</Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Свяжитесь с нами</Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Разработчики</Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Соглашение о cookies</Hyperlink>
+                        </TextBlock>
+                        <TextBlock FontSize="8" Margin="0 10 8 0">
+                            <Hyperlink>Мобильная версия</Hyperlink>
+                        </TextBlock>
+                    </WrapPanel>
+                </StackPanel>
+                <WrapPanel Margin="20 0 10 0">
+                    <Image Source="Images/wikimedia-button.png" Width="70" Height="50" Margin="20 0 20 0"></Image>
+                    <Image Source="Images/poweredby_mediawiki_88x31.png"  Width="70" Height="50"></Image>
+                </WrapPanel>
+            </WrapPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

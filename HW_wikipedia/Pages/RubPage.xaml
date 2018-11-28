@@ -1,0 +1,164 @@
+﻿<Page x:Class="HW_wikipedia.Pages.RubPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HW_wikipedia.Pages"
+      mc:Ignorable="d"      
+      Title="RubPage">
+
+    <FlowDocumentScrollViewer>
+        <FlowDocument>
+            <Section >
+                <Paragraph FontSize="25" TextAlignment="Left" Margin="0 10 10 0">Википедия:Поиск по категориям</Paragraph>
+                <BlockUIContainer>
+                    <Border BorderBrush="Gray" BorderThickness="0 0 0 1" Margin="0 0 0 10"></Border>
+                </BlockUIContainer>
+                <Paragraph TextAlignment="Left" FontSize="12">Материал из Википедии — свободной энциклопедии</Paragraph>
+                <Paragraph TextAlignment="Center" Margin="10" FontSize="12">
+                    <Bold>
+                        <Run Foreground="CornflowerBlue">Содержание Википедии</Run>
+                    </Bold>
+                    <Run Foreground="CornflowerBlue">· Обзоры · Базовые темы · Порталы · Избранное содержание ·</Run>
+                    <Bold>
+                        <Run Foreground="Black">Категории</Run>
+                    </Bold>
+                    <Run Foreground="CornflowerBlue">· Алфавитный указатель</Run>
+                </Paragraph>
+                <Paragraph FontSize="12">
+                    Здесь представлена система рубрикации страниц русской Википедии в виде дерева категорий (рубрик). Чтобы развернуть список подкатегорий нажмите на значок
+
+                    <InlineUIContainer>
+                        <Image Source="../Images/arrow.png" Width="16" Height="16"></Image>
+                    </InlineUIContainer>
+
+                    слева от их названия. В некоторых старых браузерах или при отключенном
+                    <Run Foreground="CornflowerBlue">JavaScript</Run> показ подкатегорий в виде дерева недоступен.
+                </Paragraph>
+            </Section>
+            <Table BorderBrush="Black" BorderThickness="1">
+                <TableRowGroup>
+                    <TableRow Background="LightSkyBlue">
+                        <TableCell BorderBrush="Black" BorderThickness="0 0 1 1">
+                            <Paragraph FontSize="14">
+                                <Bold>
+                                    <Run>Тематическая рубрикация</Run>
+                                </Bold>
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell BorderBrush="Black" BorderThickness="0 0 1 1">
+                            <Paragraph FontSize="14">
+                                <Bold>
+                                    <Run>Предметная рубрикация</Run>
+                                </Bold>
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell BorderBrush="Black" BorderThickness="0 0 1 1">
+                            <Paragraph FontSize="14">
+                                <Bold>
+                                    <Run>Ассоциативная рубрикация</Run>
+                                </Bold>
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                </TableRowGroup>
+                <TableRowGroup>
+                    <TableRow Background="White">
+                        <TableCell BorderBrush="Black" BorderThickness="0 0 1 1">
+                            <Paragraph FontSize="14" >
+                                <TreeView Background="Transparent" BorderThickness="0" Height="300">
+                                    <TreeViewItem Header="Статьи" Foreground="CornflowerBlue">
+                                        <TreeViewItem Header="Информация" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Общество" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Объекты" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Появившиеся" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Природа" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Техника" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Человек" Foreground="CornflowerBlue"></TreeViewItem>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Научные дисциплины" Foreground="CornflowerBlue">
+                                        <TreeViewItem Header="Науки по группам" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Естественные науки" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Общественные науки" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Формальные науки" Foreground="CornflowerBlue"></TreeViewItem>
+                                    </TreeViewItem>
+                                    <TreeViewItem Header="Информационные списки" Foreground="CornflowerBlue">
+                                        <TreeViewItem Header="Информационные списки по алфавиту" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Информационные списки по типу" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Списки:Наука" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Списки:Общество" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Списки:Природа" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Списки:Спорт" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Списки:Техника" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Списки:Человек" Foreground="CornflowerBlue"></TreeViewItem>
+                                    </TreeViewItem>
+                                </TreeView>
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell BorderBrush="Black" BorderThickness="0 0 1 1">
+                            <Paragraph FontSize="14">
+                                <TreeView Background="Transparent" BorderThickness="0" Height="300">
+                                    <TreeViewItem Header="Категории по параметру" Foreground="CornflowerBlue">
+                                        <TreeViewItem Header="Персонажи по параметру" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по войнам" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по времени" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по географическому расположению" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по жанрам" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по компаниям" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по людям" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по народам" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по происхождению" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по религиям" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по статусу" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по тематике" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по типу" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории по языкам" Foreground="CornflowerBlue"></TreeViewItem>
+                                    </TreeViewItem>
+                                </TreeView>
+                            </Paragraph>
+                        </TableCell>
+                        <TableCell BorderBrush="Black" BorderThickness="0 0 1 1">
+                            <Paragraph FontSize="14">
+                                <TreeView Background="Transparent" BorderThickness="0" Height="300">
+                                    <TreeViewItem Header="Категории-эпонимы" Foreground="CornflowerBlue">
+                                        <TreeViewItem Header="Категории абстрактных понятий" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории дистрибутивов Linux" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории журналов" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории географических объектов" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории планет" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории музыкальных групп" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории организаций" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории персонажей" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории персоналий" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории произведений" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории пророков" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории событий" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории химических элементов" Foreground="CornflowerBlue"></TreeViewItem>
+                                        <TreeViewItem Header="Категории языков программирования" Foreground="CornflowerBlue"></TreeViewItem>
+                                    </TreeViewItem>
+                                </TreeView>
+                            </Paragraph>
+                        </TableCell>
+                    </TableRow>
+                </TableRowGroup>
+            </Table>
+            <Section>
+                <Paragraph FontSize="20" TextAlignment="Left" Margin="0">См. также</Paragraph>
+                <BlockUIContainer Margin="0">
+                    <Border BorderBrush="Gray" BorderThickness="0 0 0 1"></Border>
+                </BlockUIContainer>
+                <List MarkerStyle="Disc">
+                    <ListItem>
+                        <Paragraph FontSize="12">Автоматически формируемый перечень категорий</Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph FontSize="12">Построение дерева для произвольной категории</Paragraph>
+                    </ListItem>
+                </List>
+            </Section>
+            <Section BorderBrush="Gray" BorderThickness="1" Background="WhiteSmoke" Padding="5">
+                <Paragraph  FontSize="12" Foreground="CornflowerBlue">Категория: Википедия:Содержание Википедии</Paragraph>
+            </Section>
+        </FlowDocument>
+    </FlowDocumentScrollViewer>
+</Page>
